@@ -1,0 +1,10 @@
+python -m venv C:\Users\Ilham\mongo
+C:\Users\Ilham\mongo\Scripts\activate
+pip install pymongo
+create python file : load_data.py
+python3 insert-data.py
+docker run -d --name mongodb-container -p 27017:27017 mongo
+docker exec -it mongodb-container mongosh
+use dskola
+db.createCollection('books');
+run query tugas nya di script.text

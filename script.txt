@@ -1,0 +1,5 @@
+1. db.books.find({"author":"Author 5", "borrowed_by.return_date":null})
+2. db.books.find({'published_year':{$lt:1980}, 'copies_available':{$gt:5}})
+3. db.books.find({'genre':'Fantasy'}).sort({'published_year':-1}).limit(5)
+4. db.books.aggregate([{$group:{_id:"$genre", count:{$sum:1}}}])
+5. db.books.find({'borrowed_by':{$exists:true, $size:0}})
